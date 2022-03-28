@@ -1,0 +1,23 @@
+{
+  "name": "d3-js-vue-book",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vue": "^3.2.25",
+    "vue-router": "^4.0.14"
+  },
+  "devDependencies": {
+    "@iconify/json": "^2.1.20",
+    "@vitejs/plugin-vue": "^2.2.0",
+    "unplugin-icons": "^0.14.1",
+    "unplugin-vue-components": "^0.18.5",
+    "vite": "^2.8.0",
+    "vite-plugin-windicss": "^1.8.3",
+    "windicss": "^3.5.1"
+  }
+}

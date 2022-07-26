@@ -3,11 +3,15 @@
 </template>
 
 <script>
-export default {
+import { ref } from "vue";
 
-}
+export default {
+  setup() {
+    return {
+
+    };
+  },
+};
 </script>
 
-<style>
-
-</style>
+<style></style>

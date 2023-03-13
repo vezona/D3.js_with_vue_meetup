@@ -1,5 +1,5 @@
 {
-  "name": "d3-js-vue-book",
+  "name": "d3-js-with-vue-meetup",
   "private": true,
   "version": "0.0.0",
   "scripts": {
@@ -8,6 +8,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@vueuse/core": "^9.13.0",
+    "pinia": "^2.0.33",
     "vue": "^3.2.25",
     "vue-router": "^4.0.14"
   },

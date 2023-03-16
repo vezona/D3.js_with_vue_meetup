@@ -7,15 +7,15 @@
       >Vue.js</span
     >框架的結合，讓圖表更具表現力
   </div>
-  <div class="test">lalala</div>
+  <div class="test"></div>
 </template>
 
 <script setup>
 import { ref, onMounted } from "vue";
 import * as d3 from "d3";
 
+
 onMounted(() => {
-  d3.select(".test").style("color", "red");
 });
 </script>
 

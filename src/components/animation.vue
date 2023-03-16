@@ -43,7 +43,7 @@ const drawChart = () => {
       .attr("width", width)
       .attr("height", height);
 
-    const data = chartData.value.map((i) => {
+    const data = d3.reverse(chartData.value).map((i) => {
       i["時間"] = TWDateToADDate(i["時間"]);
       return i;
     });

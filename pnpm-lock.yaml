@@ -7,6 +7,7 @@ specifiers:
   d3: ^7.8.2
   dayjs: ^1.11.7
   pinia: ^2.0.33
+  pnpm: ^7.29.3
   unplugin-icons: ^0.14.1
   unplugin-vue-components: ^0.18.5
   vite: ^2.8.0
@@ -20,6 +21,7 @@ dependencies:
   d3: 7.8.2
   dayjs: 1.11.7
   pinia: 2.0.33_vue@3.2.47
+  pnpm: 7.29.3
   vue: 3.2.47
   vue-router: 4.1.6_vue@3.2.47
 
@@ -1115,6 +1117,12 @@ packages:
       '@vue/devtools-api': 6.5.0
       vue: 3.2.47
       vue-demi: 0.13.11_vue@3.2.47
+    dev: false
+
+  /pnpm/7.29.3:
+    resolution: {integrity: sha512-w4tVG3ZV1txgM2bp9/XMmqSYYO3qdhyMVdU8S0zegVvfB6SxNL+nxRq5t7hhw+yc+GrKegyZuIp9aWPhy6NNMA==}
+    engines: {node: '>=14.6'}
+    hasBin: true
     dev: false
 
   /postcss/8.4.21:

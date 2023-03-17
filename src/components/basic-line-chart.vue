@@ -113,7 +113,7 @@ const drawChart = () => {
       .attr("d", lineChart(data))
       .attr("fill", "none")
       .attr("stroke", "#f68b47")
-      .attr("stroke-width", 1.5);
+      .attr("stroke-width", 4);
   }
 };
 

@@ -1,7 +1,28 @@
 <script setup>
-import { ref, onMounted, onUnmounted } from "vue";
+import { ref, computed, watch, onMounted, onUnmounted } from "vue";
 import * as d3 from "d3";
 import dayjs from "dayjs";
+
+const props = defineProps({
+  title: {
+    required: true,
+    type: String,
+  },
+  data: {
+    required: true,
+    type: Array,
+  },
+  width: {
+    default: 500,
+    type: Number,
+  },
+  height: {
+    default: 270,
+    type: Number,
+  },
+});
+const xScale = computed(() => {});
+const xScale = computed(() => {});
 
 const chartData = ref(null); //  API 取得的資料
 

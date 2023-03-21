@@ -29,7 +29,6 @@ const viewBox = computed(() => {
   return `0 0 ${props.width} ${props.height}`;
 });
 
-
 const xScale = computed(() => {
   return d3
     .scaleLinear()
@@ -60,52 +59,51 @@ const line = computed(() => {
   return path.value(props.data);
 });
 
+const renderPath = () => {
+  if (!pathRef.value) return;
+  d3.select(pathRef.value)
+    .attr("transform", "translate(0,30)")
+    .selectAll("path")
+    .data(props.data)
+    .join("path")
+    .transition()
+    .duration(1000)
+    .attr("d", line.value)
+    .attr("fill", "none")
+    .attr("stroke", "#f68b47")
+    .attr("stroke-width", 4);
+};
 
-const renderPath = ()=>{
-    if (!pathRef.value) return;
-    d3.select(pathRef.value)
-      .attr("transform", "translate(0,30)")
-      .selectAll("path")
-      .data(props.data)
-      .join("path")
-      .transition()
-      .duration(1000)
-      .attr("d", line.value)
-      .attr("fill", "none")
-      .attr("stroke", "#f68b47")
-      .attr("stroke-width", 4);
-}
+const renderXAxis = () => {
+  if (!xAxisRef.value) return;
+  d3.select(xAxisRef.value)
+    .transition()
+    .duration(1000)
+    .call(xAxisGenerator.value)
+    .attr("transform", `translate(0,${props.height - 30})`);
+};
 
-const renderXAxis = ()=>{
-    if (!xAxisRef.value) return;
-    d3.select(xAxisRef.value)
-      .transition()
-      .duration(1000)
-      .call(xAxisGenerator.value)
-      .attr("transform", `translate(0,${props.height - 30})`);
-}
-
-const renderYAxis = ()=>{
-        if (!yAxisRef.value) return;
-    d3.select(yAxisRef.value)
-      .transition()
-      .duration(1000)
-      .call(yAxisGenerator.value)
-      .attr("transform", "translate(30,30)");
-}
+const renderYAxis = () => {
+  if (!yAxisRef.value) return;
+  d3.select(yAxisRef.value)
+    .transition()
+    .duration(1000)
+    .call(yAxisGenerator.value)
+    .attr("transform", "translate(30,30)");
+};
 
 onMounted(() => {
-//     watch(props, () => {
-//       renderPath();
-//       renderXAxis()
-//       renderYAxis()
-//   }, {immediate: true});
-
   watchEffect(() => {
-      renderPath();
-      renderXAxis()
-      renderYAxis()
+    renderPath();
+    renderXAxis();
+    renderYAxis();
   });
+
+  //     watch(props, () => {
+  //       renderPath();
+  //       renderXAxis()
+  //       renderYAxis()
+  //   }, {immediate: true});
 });
 </script>
 

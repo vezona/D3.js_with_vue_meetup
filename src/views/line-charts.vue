@@ -30,16 +30,15 @@ const TWDateToADDate = (date) => {
 };
 
 // 取得房價資料
-const housePriceData = ref([])
+const housePriceData = ref([]);
 const fetchHousePriceData = async () => {
-const res =  await d3.csv("/data/U96年-113年房價統計資訊整合結果.csv");
+  const res = await d3.csv("/data/U96年-113年房價統計資訊整合結果.csv");
 
-housePriceData.value = d3.reverse(res).map((i) => {
+  housePriceData.value = d3.reverse(res).map((i) => {
     i["時間"] = TWDateToADDate(i["時間"]);
     return i;
   });
 };
-
 
 fetchHousePriceData();
 </script>
@@ -53,6 +52,14 @@ fetchHousePriceData();
   </button>
   <basic-line-chart title="結合vue的d3.js基本折線圖" :data="data" />
 
-  <basic-line-chart-houseprice title="房價趨勢折線圖" :data="housePriceData" class="mt-20"/>
-  <animation-line-chart-houseprice title="房價趨勢折線圖" :data="housePriceData" class="mt-20"/>
+  <basic-line-chart-houseprice
+    title="房價趨勢折線圖"
+    :data="housePriceData"
+    class="mt-20"
+  />
+  <animation-line-chart-houseprice
+    title="房價趨勢折線圖動畫"
+    :data="housePriceData"
+    class="mt-20"
+  />
 </template>

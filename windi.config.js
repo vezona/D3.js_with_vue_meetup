@@ -34,5 +34,22 @@ export default defineConfig({
           ...colors,
         }
       }
-    }
+  },
+  shortcuts: {
+    'rounded-btn': {
+      // 圓框按鈕通用
+      '@apply':
+        'select-none border border-c-brown-500 rounded-md px-3 py-1 cursor-pointer text-white text-center bg-c-main-orange',
+      '&:hover': {
+        '@apply': 'border-c-brown-300 text-gray-500 bg-orange-300',
+      },
+      '&:active, &.is-active': {
+        '@apply': 'border-c-brown-700 text-white bg-c-brown-700',
+      },
+      '&.is-disabled, &[disabled]': {
+        '@apply':
+          'border-trueGray-200 bg-trueGray-200 text-trueGray-400 cursor-not-allowed group-hover:border-trueGray-300 group-hover:bg-trueGray-300',
+      },
+    },
+  }
   })

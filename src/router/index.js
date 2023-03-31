@@ -6,6 +6,7 @@ import LineCharts from '../views/line-charts.vue'
 import MultiLineCharts from '../views/multi-line-charts.vue'
 import BarCharts from '../views/bar-charts.vue'
 import CombinedCharts from '../views/combined-charts.vue'
+import Maps from '../views/Maps.vue'
 
 const routes = [
     { path: '/', name: 'Home', component: Home },
@@ -13,6 +14,7 @@ const routes = [
     { path: '/multi-line-charts', name: 'MultiLineCharts', component: MultiLineCharts },
     { path: '/bar-charts', name: 'BarCharts', component: BarCharts },
     { path: '/combined-charts', name: 'CombinedCharts', component: CombinedCharts },
+    { path: '/maps', name: 'Maps', component: Maps },
 ]
 
 const router = createRouter({

@@ -1,7 +1,6 @@
 <script setup>
 import { ref } from "vue";
 import * as d3 from "d3";
-import Prism from "prismjs";
 
 const data1 = ref([99, 71, 78, 25, 36, 92, 105, 34, 69, 72, 55]);
 const data2 = ref([59, 25, 92, 30, 46, 84, 88, 104, 39, 52, 75]);

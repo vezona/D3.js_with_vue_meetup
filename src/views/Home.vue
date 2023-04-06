@@ -10,20 +10,26 @@
 
   <router-link
     to="/line-charts"
-    class="border rounded m-auto border-gray-500 my-8 text-center py-2 px-3 w-100px block"
+    class="border rounded m-auto border-gray-500 my-8 text-center py-2 px-3 w-150px block"
     >折線圖
   </router-link>
 
   <router-link
+    to="/line-chart-component"
+    class="border rounded m-auto border-gray-500 my-8 text-center py-2 px-3 w-150px block"
+    >折線圖元件
+  </router-link>
+
+  <router-link
     to="/bar-charts"
-    class="border rounded m-auto border-gray-500 my-8 text-center py-2 px-3 w-100px block"
+    class="border rounded m-auto border-gray-500 my-8 text-center py-2 px-3 w-150px block"
     >長條圖
   </router-link>
 
   <router-link
-    to="/combined-charts"
-    class="border rounded m-auto border-gray-500 my-8 text-center py-2 px-3 w-100px block"
-    >合併圖
+    to="/maps"
+    class="border rounded m-auto border-gray-500 my-8 text-center py-2 px-3 w-150px block"
+    >地圖
   </router-link>
 </template>
 

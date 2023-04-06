@@ -2,18 +2,16 @@ import { createRouter, createWebHistory } from 'vue-router';
 import { useMainStore } from '/src/store/mainStore.js';
 import { useMediaQuery } from '@vueuse/core';
 import Home from '../views/Home.vue'
-import LineCharts from '../views/line-charts.vue'
-import MultiLineCharts from '../views/multi-line-charts.vue'
-import BarCharts from '../views/bar-charts.vue'
-import CombinedCharts from '../views/combined-charts.vue'
+import LineCharts from '../views/LineCharts.vue'
+import LineChartComponent from '../views/LineChartComponent.vue'
+import BarCharts from '../views/BarCharts.vue'
 import Maps from '../views/Maps.vue'
 
 const routes = [
     { path: '/', name: 'Home', component: Home },
     { path: '/line-charts', name: 'LineCharts', component: LineCharts },
-    { path: '/multi-line-charts', name: 'MultiLineCharts', component: MultiLineCharts },
+    { path: '/line-chart-component', name: 'LineChartComponent', component: LineChartComponent },
     { path: '/bar-charts', name: 'BarCharts', component: BarCharts },
-    { path: '/combined-charts', name: 'CombinedCharts', component: CombinedCharts },
     { path: '/maps', name: 'Maps', component: Maps },
 ]
 
